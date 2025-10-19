@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Assalamualaikum My Queen 💙❄️</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap');
+
+  body {
+    background: radial-gradient(circle at top left, #e3f2fd, #bbdefb, #c5cae9);
+    font-family: 'Poppins', sans-serif;
+    color: #0d47a1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+  }
+
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    color: #1565c0;
+    font-size: 42px;
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease;
+  }
+
+  p {
+    font-size: 18px;
+    color: #1e3a8a;
+    margin: 10px 0 25px;
+  }
+
+  input {
+    border: 2px solid #90caf9;
+    border-radius: 25px;
+    padding: 10px 20px;
+    width: 200px;
+    outline: none;
+    font-size: 16px;
+    color: #1565c0;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 8px rgba(25,118,210,0.3);
+  }
+
+  button {
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 10px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.4s ease;
+  }
+
+  button:hover {
+    background: #1565c0;
+    transform: scale(1.05);
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+
+  .snowflake {
+    position: absolute;
+    top: -1rem;
+    color: white;
+    font-size: 20px;
+    opacity: 0.3;
+    animation: fall 9s linear infinite;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(110vh);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Assalamualaikum <br> My Queen 💙</h1>
+<p>Enter Your favorite 4 digits number ☃️<br>👇</p>
+
+<input type="text" id="replyInput" placeholder="Type your reply...">
+<button onclick="checkReply()">Send 💌</button>
+
+<audio autoplay loop>
+  <source src="https://cdn.pixabay.com/download/audio/2023/02/01/audio_217e03c6a8.mp3?filename=soft-winter-piano-136784.mp3" type="audio/mp3">
+</audio>
+
+<script>
+const flakes = ['❄️','❅','💙','🌨️'];
+function createFlake() {
+  const flake = document.createElement('div');
+  flake.classList.add('snowflake');
+  flake.textContent = flakes[Math.floor(Math.random() * flakes.length)];
+  flake.style.left = Math.random() * 100 + 'vw';
+  flake.style.animationDuration = 7 + Math.random() * 4 + 's';
+  document.body.appendChild(flake);
+  setTimeout(() => flake.remove(), 9000);
+}
+setInterval(createFlake, 800);
+
+function checkReply() {
+  const reply = document.getElementById('replyInput').value.trim();
+  if (reply.toLowerCase() === "4752") {
+    window.location.href = "page3.html";
+  } else {
+    alert("Ahn, Its's Wrong... My Sweet Heart 😘❄️");
+  }
+}
+</script>
+
+</body>
+</html>
