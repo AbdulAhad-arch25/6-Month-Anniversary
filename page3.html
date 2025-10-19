@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💙 Abdul Ahad to Arfa 💙</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #90caf9, #2196f3, #1565c0);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgflow 6s infinite alternate;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  @keyframes bgflow {
+    0% { background: linear-gradient(135deg, #90caf9, #1565c0); }
+    100% { background: linear-gradient(135deg, #1565c0, #2196f3); }
+  }
+
+  #textContainer {
+    position: absolute;
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .line {
+    font-size: 26px;
+    line-height: 1.5;
+    text-align: center;
+    text-shadow: 0 0 20px #e3f2fd;
+    opacity: 0;
+    animation: fadeLine 6s ease-in-out forwards;
+  }
+
+  @keyframes fadeLine {
+    0% { opacity: 0; transform: translateY(20px); }
+    20%, 80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+  }
+
+  .snow {
+    position: absolute;
+    top: -1rem;
+    color: white;
+    font-size: 18px;
+    opacity: 0.4;
+    animation: fall 9s linear infinite;
+  }
+
+  @keyframes fall {
+    to { transform: translateY(110vh); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+  <div id="textContainer"></div>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f07dbf826.mp3?filename=soft-piano-music-14375.mp3" type="audio/mpeg">
+  </audio>
+
+<script>
+const snow = ['❄️','💙','☃️','❅'];
+function createSnow() {
+  const s = document.createElement('div');
+  s.classList.add('snow');
+  s.textContent = snow[Math.floor(Math.random() * snow.length)];
+  s.style.left = Math.random() * 100 + 'vw';
+  s.style.animationDuration = 6 + Math.random() * 4 + 's';
+  document.body.appendChild(s);
+  setTimeout(() => s.remove(), 9000);
+}
+setInterval(createSnow, 600);
+
+const lines = [
+  "💙❄️ Abdul Ahad  to  Arfa Abdul Ahad ❄️💙",
+  "I still can’t believe it’s already been six months with you.",
+  "Half a year of growing closer, deeper, and more in love with every passing day.",
+  "These months have flown by like a beautiful dream — calm, comforting, and full of magic.",
+  "You've become such an important part of my world that everything before you feels incomplete.",
+  "Your presence brings me peace, your smile gives me strength.",
+  "Just thinking of you makes the hardest days feel lighter.",
+  "Love isn’t just about sweet moments — it’s about patience and understanding.",
+  "In these six months, I’ve fallen in love with your heart and your kindness.",
+  "Thank you for loving me, choosing me, and staying even when it wasn’t easy.",
+  "I want it all with you — every sunrise, every sunset, every quiet moment.",
+  "Happy 6 months, my love 💖",
+  "You’re not just a part of my life… You are my life. 💞",
+  "💫 THE END 💫"
+];
+
+let index = 0;
+const container = document.getElementById("textContainer");
+
+function showLine() {
+  if (index >= lines.length) return; // stop at the end
+  container.innerHTML = ""; 
+  const line = document.createElement("div");
+  line.className = "line";
+  line.textContent = lines[index];
+  container.appendChild(line);
+  index++;
+  if (index < lines.length) {
+    setTimeout(showLine, 6000);
+  }
+}
+
+showLine();
+</script>
+
+</body>
+</html>
