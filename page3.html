@@ -37,7 +37,7 @@
 
   .line {
     font-size: 26px;
-    line-height: 1.5;
+    line-height: 1.6;
     text-align: center;
     text-shadow: 0 0 20px #e3f2fd;
     opacity: 0;
@@ -97,17 +97,17 @@ const lines = [
   "In these six months, I’ve fallen in love with your heart and your kindness.",
   "Thank you for loving me, choosing me, and staying even when it wasn’t easy.",
   "I want it all with you — every sunrise, every sunset, every quiet moment.",
+  "And listen… never even think that I could leave you.",
+  "Just like my prayer mat is only mine in worship 🧎‍♂️, you’re only mine in love ❤️ — completely, endlessly ♾️.",
   "Happy 6 months, my love 💖",
   "You’re not just a part of my life… You are my life. 💞",
- And listen… never even think that I could leave you. Just like my prayer mat is only mine in worship 🧎‍♂️, you’re only mine in love ❤️ — completely, endlessly ♾️.
-  "💫 THE END 💫"
+  "✨ THE END 💫"
 ];
 
 let index = 0;
 const container = document.getElementById("textContainer");
 
 function showLine() {
-  if (index >= lines.length) return; // stop at the end
   container.innerHTML = ""; 
   const line = document.createElement("div");
   line.className = "line";
